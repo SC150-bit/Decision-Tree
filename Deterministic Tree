@@ -1,0 +1,17 @@
+def decision_tree(weather, temperature, workload):
+    if weather == "Rainy":
+        return "Stay Home"
+    
+    if weather == "Sunny":
+        if temperature == "Hot":
+            return "Stay Home"
+        elif temperature == "Cold":
+            return "Go Out"
+        else:  # Moderate
+            if workload == "High":
+                return "Stay Home"
+            else:
+                return "Go Out"
+
+# Example
+print(decision_tree("Sunny", "Moderate", "Low"))
